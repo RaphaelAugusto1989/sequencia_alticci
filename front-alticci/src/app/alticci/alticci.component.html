@@ -1,0 +1,20 @@
+<ng-container>
+  <mat-card>
+    <mat-card-title>Sequência Alticci</mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="form">
+          <mat-form-field class="input" appearance="fill">
+            <mat-label>Insira um numero</mat-label>
+            <input type="number" formControlName="number" matInput>
+          </mat-form-field>
+          <button mat-flat-button color="primary" class="btn-style" (click)="sequenciar()">Alticci</button>
+          <button mat-stroked-button color="warn" class="btn-style" (click)="limpar()">Limpar</button>
+        </form>
+      </mat-card-content>
+
+      <div *ngIf="sequenciaAlticci">
+        <p>Resultado da Sequência Altticci</p>
+        {{ sequenciaAlticci }}
+      </div>
+  </mat-card>
+</ng-container>
